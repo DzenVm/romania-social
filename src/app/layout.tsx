@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   description:
     "Jocuri sociale doar pentru divertisment. Fără bani reali, fără depuneri și fără retrageri. Doar pentru utilizatori de 18+.",
   robots: "index, follow",
+  icons: { icon: "/favicon.svg" },
 };
 
 export default function RootLayout({

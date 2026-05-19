@@ -67,7 +67,6 @@ export default function InfoSection() {
   return (
     <section id="cum-functioneaza" style={{ padding: "0 0 80px" }}>
       <div className="container">
-        {/* 3 info cards */}
         <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: 20, marginBottom: 20 }} className="info-grid">
           {infoCards.map(card => (
             <article key={card.title} style={{
@@ -83,7 +82,6 @@ export default function InfoSection() {
           ))}
         </div>
 
-        {/* FAQ */}
         <article style={{
           background: "rgba(15,26,46,.58)", border: "1px solid var(--border)",
           borderRadius: "var(--radius-lg)", padding: "28px 28px 12px",

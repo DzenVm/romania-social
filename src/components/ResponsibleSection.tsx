@@ -12,8 +12,7 @@ export default function ResponsibleSection() {
             Resurse pentru Jocuri Responsabile
           </h2>
 
-          {/* 18+ + org links row */}
-          <div style={{ display: "flex", alignItems: "stretch", gap: 12, marginBottom: 16, overflowX: "auto", flexWrap: "wrap" }}>
+          <div style={{ display: "flex", alignItems: "stretch", gap: 12, marginBottom: 16, flexWrap: "wrap" }}>
             <div style={{
               display: "inline-flex", alignItems: "center", justifyContent: "center",
               padding: "0 18px", minHeight: 50, borderRadius: "var(--radius-md)",
@@ -21,7 +20,6 @@ export default function ResponsibleSection() {
               background: "linear-gradient(135deg, #dc2626, #ff6b35)",
               fontWeight: 900, fontSize: 22, color: "#fff",
               boxShadow: "0 12px 32px rgba(220,38,38,.22)",
-              animation: "resBeat 2.8s ease-in-out infinite",
               flexShrink: 0,
             }}>
               18+
@@ -31,14 +29,19 @@ export default function ResponsibleSection() {
               { label: "GamCare", href: "https://www.gamcare.org.uk/" },
               { label: "Joc Responsabil", href: "https://www.jocresponsabil.ro/" },
             ].map(org => (
-              <a key={org.label} href={org.href} target="_blank" rel="noopener noreferrer" style={{
-                display: "inline-flex", alignItems: "center", justifyContent: "center",
-                padding: "0 16px", minHeight: 50, flex: "1 1 120px", minWidth: 120,
-                borderRadius: "var(--radius-md)", border: "1px solid var(--border)",
-                background: "rgba(255,255,255,.04)", fontWeight: 800,
-                fontSize: "clamp(13px,1.5vw,16px)", color: "var(--text)", whiteSpace: "nowrap",
-                transition: "transform var(--transition), background var(--transition), border-color var(--transition)",
-              }}
+              <a
+                key={org.label}
+                href={org.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  display: "inline-flex", alignItems: "center", justifyContent: "center",
+                  padding: "0 16px", minHeight: 50, flex: "1 1 120px", minWidth: 120,
+                  borderRadius: "var(--radius-md)", border: "1px solid var(--border)",
+                  background: "rgba(255,255,255,.04)", fontWeight: 800,
+                  fontSize: "clamp(13px,1.5vw,16px)", color: "var(--text)", whiteSpace: "nowrap",
+                  transition: "transform var(--transition), border-color var(--transition)",
+                }}
                 onMouseEnter={e => {
                   (e.currentTarget as HTMLElement).style.transform = "translateY(-2px)";
                   (e.currentTarget as HTMLElement).style.borderColor = "rgba(255,107,53,.3)";
@@ -58,7 +61,6 @@ export default function ResponsibleSection() {
             jocuri de noroc cu bani reali și nu necesită licență din partea autorității naționale.
           </p>
 
-          {/* Legal disclaimer */}
           <div style={{
             padding: "16px 18px", borderRadius: "var(--radius-md)",
             border: "1px solid var(--border)", background: "rgba(255,255,255,.02)", marginBottom: 18,
@@ -69,21 +71,11 @@ export default function ResponsibleSection() {
               Aceasta este o platformă de jocuri sociale — nu sunt disponibile jocuri de noroc cu bani reali.
               Toate jocurile folosesc doar monedă virtuală fără valoare reală. Nu poți depune, câștiga sau retrage
               bani reali. Moneda virtuală nu are valoare reală și nu poate fi schimbată în bani reali.
-              Platforma este destinată utilizatorilor de 18 ani și peste. Susținem puternic practicile de jocuri responsabile.
+              Platforma este destinată utilizatorilor de 18 ani și peste.
             </p>
           </div>
         </div>
       </div>
-
-      <style>{`
-        @keyframes resBeat {
-          0%, 100% { transform: scale(1); }
-          50% { transform: scale(1.04); }
-        }
-        @media (prefers-reduced-motion: reduce) {
-          [style*="resBeat"] { animation: none !important; }
-        }
-      `}</style>
     </section>
   );
 }

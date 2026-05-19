@@ -34,34 +34,31 @@ export default function Navbar() {
       }}
     >
       <div className="container" style={{ display: "flex", alignItems: "center", height: 64, justifyContent: "space-between" }}>
-        {/* Logo */}
-        <Link href="/" style={{ display: "flex", alignItems: "center", gap: 10 }}>
-          <div style={{
-            width: 36, height: 36, borderRadius: 10,
-            background: "linear-gradient(135deg, #ff6b35, #ffd700)",
-            display: "flex", alignItems: "center", justifyContent: "center",
-            fontWeight: 900, fontSize: 18, color: "#111",
-          }}>S</div>
-          <span style={{ fontWeight: 900, fontSize: 20 }}>
-            Slot<span style={{ color: "var(--accent)" }}>Social</span>
-          </span>
-        </Link>
-
         {/* Desktop nav */}
         <div style={{ display: "flex", gap: 28, alignItems: "center" }} className="desktop-nav">
           {links.map(l => (
-            <Link key={l.href} href={l.href} style={{ color: "var(--muted)", fontWeight: 600, fontSize: 14, transition: "color .15s" }}
+            <Link
+              key={l.href}
+              href={l.href}
+              style={{ color: "var(--muted)", fontWeight: 600, fontSize: 14, transition: "color .15s" }}
               onMouseEnter={e => (e.currentTarget.style.color = "var(--text)")}
               onMouseLeave={e => (e.currentTarget.style.color = "var(--muted)")}
-            >{l.label}</Link>
+            >
+              {l.label}
+            </Link>
           ))}
-          <Link href="/joc" className="btn" style={{ minWidth: "auto", padding: "10px 22px", fontSize: 14 }}>
-            🎰 Joacă Acum
-          </Link>
         </div>
 
+        <Link href="/joc" className="btn" style={{ minWidth: "auto", padding: "10px 22px", fontSize: 14 }}>
+          Joacă Acum
+        </Link>
+
         {/* Mobile burger */}
-        <button onClick={() => setOpen(!open)} style={{ display: "none", background: "none", border: "none", color: "var(--text)", fontSize: 24, cursor: "pointer" }} className="burger-btn">
+        <button
+          onClick={() => setOpen(!open)}
+          style={{ display: "none", background: "none", border: "none", color: "var(--text)", fontSize: 24, cursor: "pointer" }}
+          className="burger-btn"
+        >
           {open ? "✕" : "☰"}
         </button>
       </div>
@@ -70,10 +67,18 @@ export default function Navbar() {
       {open && (
         <div style={{ background: "rgba(11,18,32,.98)", borderTop: "1px solid var(--border)", padding: "16px 20px", display: "flex", flexDirection: "column", gap: 12 }}>
           {links.map(l => (
-            <Link key={l.href} href={l.href} style={{ color: "var(--muted)", fontWeight: 600, padding: "8px 0", borderBottom: "1px solid var(--border)" }}
-              onClick={() => setOpen(false)}>{l.label}</Link>
+            <Link
+              key={l.href}
+              href={l.href}
+              style={{ color: "var(--muted)", fontWeight: 600, padding: "8px 0", borderBottom: "1px solid var(--border)" }}
+              onClick={() => setOpen(false)}
+            >
+              {l.label}
+            </Link>
           ))}
-          <Link href="/joc" className="btn" style={{ textAlign: "center", marginTop: 8 }}>🎰 Joacă Acum</Link>
+          <Link href="/joc" className="btn" style={{ textAlign: "center", marginTop: 8 }}>
+            Joacă Acum
+          </Link>
         </div>
       )}
 

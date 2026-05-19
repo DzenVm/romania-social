@@ -18,7 +18,6 @@ export default function Footer() {
                 <Link key={l.href} href={l.href} style={{
                   padding: "9px 12px", borderRadius: 10, border: "1px solid var(--border)",
                   background: "rgba(255,255,255,.03)", color: "var(--muted)", fontWeight: 700, fontSize: 13,
-                  transition: "color var(--transition), background var(--transition), border-color var(--transition)",
                 }}>
                   {l.label}
                 </Link>
@@ -29,7 +28,7 @@ export default function Footer() {
               background: "rgba(255,107,53,.1)", border: "1px solid rgba(255,107,53,.2)",
               borderRadius: 8, padding: "6px 12px", fontSize: 12, fontWeight: 700, color: "var(--accent)",
             }}>
-              🔞 DOAR 18+ | 🚫 FĂRĂ BANI REALI | 🎮 DOAR PENTRU DIVERTISMENT
+              DOAR 18+ | FĂRĂ BANI REALI | DOAR PENTRU DIVERTISMENT
             </div>
           </div>
 
