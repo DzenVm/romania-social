@@ -4,6 +4,7 @@ import { useState, useRef, useCallback, useEffect } from "react";
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 import Footer from "@/components/Footer";
+import AgeGate from "@/components/AgeGate";
 import SlotSymbol, { SYMBOLS, SYMBOL_LABEL, type SymbolName } from "./SlotSymbol";
 import styles from "./game.module.css";
 
@@ -209,6 +210,7 @@ export default function GamePageClient() {
 
   return (
     <div className={styles.wrap}>
+      <AgeGate />
       {/* Topbar */}
       <div className={styles.topbar}>
         <div className={styles.pills}>

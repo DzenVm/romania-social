@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import KeepParamsLink from "./KeepParamsLink";
 import styles from "./Hero.module.css";
 
 const trustItems = [
@@ -20,7 +21,7 @@ export default function Hero() {
             Sloturi Sociale <span className={styles.accent}>Online</span>
           </h1>
 
-          <Link href="/joc" className={styles.image} aria-label="Joacă slotul social acum">
+          <KeepParamsLink to="/joc" className={styles.image} aria-label="Joacă slotul social acum">
             <Image
               src="/images/hero.webp"
               alt="Jocuri sociale online — monedă virtuală"
@@ -29,11 +30,11 @@ export default function Hero() {
               priority
               className={styles.img}
             />
-          </Link>
+          </KeepParamsLink>
 
-          <Link href="/joc" className={`btn btn-hero-cta ${styles.cta}`}>
+          <KeepParamsLink to="/joc" className={`btn btn-hero-cta ${styles.cta}`}>
             Joacă Acum
-          </Link>
+          </KeepParamsLink>
         </div>
 
         {/* Rest of the hero content */}

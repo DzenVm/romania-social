@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import KeepParamsLink from "./KeepParamsLink";
 
 const links = [
   { href: "/#jocuri", label: "Jocuri" },
@@ -49,9 +50,9 @@ export default function Navbar() {
           ))}
         </div>
 
-        <Link href="/joc" className="btn" style={{ minWidth: "auto", padding: "10px 22px", fontSize: 14 }}>
+        <KeepParamsLink to="/joc" className="btn" style={{ minWidth: "auto", padding: "10px 22px", fontSize: 14 }}>
           Joacă Acum
-        </Link>
+        </KeepParamsLink>
 
         {/* Mobile burger */}
         <button
@@ -76,9 +77,9 @@ export default function Navbar() {
               {l.label}
             </Link>
           ))}
-          <Link href="/joc" className="btn" style={{ textAlign: "center", marginTop: 8 }}>
+          <KeepParamsLink to="/joc" className="btn" style={{ textAlign: "center", marginTop: 8 }}>
             Joacă Acum
-          </Link>
+          </KeepParamsLink>
         </div>
       )}
 
