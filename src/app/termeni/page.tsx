@@ -5,7 +5,6 @@ export const metadata: Metadata = {
   title: "Termeni și Condiții",
   description: "Termenii și condițiile de utilizare a platformei rogaleme.online — jocuri sociale fără bani reali.",
   alternates: { canonical: "https://rogaleme.online/termeni" },
-  robots: { index: true, follow: true },
 };
 
 export default function TermeniPage() {

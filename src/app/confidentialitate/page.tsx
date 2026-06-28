@@ -5,7 +5,6 @@ export const metadata: Metadata = {
   title: "Politica de Confidențialitate",
   description: "Politica de confidențialitate a platformei rogaleme.online — cum colectăm, folosim și protejăm datele dvs.",
   alternates: { canonical: "https://rogaleme.online/confidentialitate" },
-  robots: { index: true, follow: true },
 };
 
 export default function ConfidentialittatePage() {
